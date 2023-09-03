@@ -2,7 +2,7 @@ FROM golang:1-alpine as build
 
 WORKDIR /app
 COPY cmd cmd
-RUN go build cmd/hello/hello.go
+RUN go build hello.go
 
 FROM alpine:latest
 
