@@ -2,8 +2,8 @@ FROM golang:1-alpine as build
 
 WORKDIR /app
 COPY cmd cmd
-#RUN go build hello.go
 RUN go build cmd/hello/hello.go
+
 FROM alpine:latest
 
 WORKDIR /app
